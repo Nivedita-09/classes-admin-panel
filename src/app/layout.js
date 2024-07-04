@@ -1,3 +1,6 @@
+import React from "react";
+import Navbar from "@/components/navbar/Navbar";
+import Sidebar from "@/components/sidebar/Sidebar";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -9,9 +12,25 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // const handleToggleSidebar = () => {
+  //   setIsSidebarOpen(!isSidebarOpen);
+  // };
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <div className="w-full">
+          <Navbar onToggleSidebar={handleToggleSidebar} />
+          <div className="flex flex-row">
+            <div>
+              <Sidebar isOpen={isSidebarOpen} />
+              {children}
+            </div>
+          </div>
+        </div> */}
+        {children}
+      </body>
     </html>
   );
 }
